@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function math_operation(arg_1, operation, arg_2) {
+            switch (operation) {
+                case ('+'):
+                    return arg_1 + arg_2
+                    break;
+                case ('-'):
+                    return arg_1 - arg_2
+                    break;
+                case ('/'):
+                    return arg_1 / arg_2
+                    break;
+                case ('*'):
+                    return arg_1 * arg_2
+                    break;
+            }
+        }
+
+        let num_1 = +prompt('Введите значение 1-го числа')
+        let arithmetic_operation = prompt('Введите арифмитическую операцию которую хотите провести (*, /, +, -).')
+        let num_2 = +prompt('Введите значение 2-го числа')
+
+        let rezult = math_operation(num_1, arithmetic_operation, num_2)
+        alert('Результат = ' + rezult)
+
+    </script>
+</body>
+
+</html>
