@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function addition(num_1, num_2) {
+            return num_1 + num_2
+        }
+
+        function subtraction(num_1, num_2) {
+            return num_1 - num_2
+        }
+
+        function multiplication(num_1, num_2) {
+            return num_1 * num_2
+        }
+
+        function division(num_1, num_2) {
+            return num_1 / num_2
+        }
+
+        let num_1 = +prompt('Введите значение 1-го числа')
+        let arithmetic_operation = prompt('Введите арифмитическую операцию которую хотите провести (*, /, +, -).')
+        let num_2 = +prompt('Введите значение 2-го числа')
+        let rezult = NaN
+
+        if (arithmetic_operation == '*') {
+            rezult = multiplication(num_1, num_2)
+        }
+        if (arithmetic_operation == '/') {
+            rezult = division(num_1, num_2)
+        }
+        if (arithmetic_operation == '+') {
+            rezult = addition(num_1, num_2)
+        }
+        if (arithmetic_operation == '-') {
+            rezult = subtraction(num_1, num_2)
+        }
+
+        alert('Полученное значение = ' + rezult)
+    </script>
+</body>
+
+</html>

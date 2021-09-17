@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let amount_of_money = prompt('Введите сумму которую хотите зачислить на счет.')
+
+        let int_number = +amount_of_money
+        let the_last_character = amount_of_money.charAt(amount_of_money.length - 1)
+        let penultimate_character = amount_of_money.charAt(amount_of_money.length - 2)
+        let summ_last_and_penultimate = penultimate_character + the_last_character
+        summ_last_and_penultimate = +summ_last_and_penultimate
+
+        var correct_case = NaN
+
+        if (int_number < 10) {
+            switch (the_last_character) {
+                case '0':
+                case '5':
+                case '6':
+                case '7':
+                case '8':
+                case '9':
+                    correct_case = 'рублей'
+                    break;
+
+                case '1':
+                    correct_case = 'рубль'
+                    break;
+
+                case '2':
+                case '3':
+                case '4':
+                    correct_case = 'рубля'
+                    break;
+            }
+        }
+        if (summ_last_and_penultimate >= 10 && summ_last_and_penultimate < 20) {
+            correct_case = 'рублей'
+        }
+        else {
+            switch (the_last_character) {
+                case '0':
+                case '5':
+                case '6':
+                case '7':
+                case '8':
+                case '9':
+                    correct_case = 'рублей'
+                    break;
+
+                case '1':
+                    correct_case = 'рубль'
+                    break;
+
+                case '2':
+                case '3':
+                case '4':
+                    correct_case = 'рубля'
+                    break;
+            }
+        }
+
+
+        alert('Ваша сумма в ' + amount_of_money + ' ' + correct_case + ' успешно зачислена')
+
+
+
+    </script>
+</body>
+
+</html>
