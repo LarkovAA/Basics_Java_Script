@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const post = {
+            author: "John", //вывести этот текст 
+
+            postId: 23,
+            comments: [
+                {
+                    userId: 10,
+                    userName: "Alex",
+                    text: "lorem ipsum",
+                    rating:
+                    {
+                        likes: 10,
+                        dislikes: 2 //вывести это число
+                    }
+                },
+                {
+                    userId: 5, //вывести это число 
+                    userName: "Jane",
+                    text: "lorem ipsum 2", //вывести этот текст 
+                    rating: {
+                        likes: 3,
+                        dislikes: 1
+                    }
+                },
+            ]
+        };
+
+        num = 1
+        for (val in post) {
+            if (num == 1) {
+                console.log(post[val])
+            }
+            if (num == 3) {
+                list_1 = post[val]
+                num_2 = 1
+                for (val_2 in list_1) {
+                    if (num_2 == 1) {
+                        num_3 = 1
+                        for (val_3 in list_1[val_2]) {
+                            if (num_3 == 4) {
+                                num_4 = 1
+                                for (val_4 in list_1[val_2][val_3]) {
+                                    if (num_4 == 2) {
+                                        console.log(list_1[val_2][val_3][val_4])
+                                    }
+                                    num_4 += 1
+                                }
+                            }
+                            num_3 += 1
+                        }
+                    }
+                    if (num_2 == 2) {
+                        num_5 = 1
+                        for (val_5 in list_1[val_2]) {
+                            if (num_5 == 1) {
+                                console.log(list_1[val_2][val_5])
+                            }
+                            if (num_5 == 3) {
+                                console.log(list_1[val_2][val_5])
+                            }
+                            num_5 += 1
+                        }
+                    }
+                    num_2 += 1
+                }
+            }
+            num += 1
+        }
+
+    </script>
+</body>
+
+</html>
