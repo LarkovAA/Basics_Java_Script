@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict'
+        class Recalculation_to_hundredths {
+            constructor(num_1) {
+                this.number = num_1
+                this.dict = {}
+            }
+
+            recalculation() {
+                for (let num = 0; num <= 3; num++) {
+                    if (num == 0) {
+                        var remains = this.number % 10
+                        this.dict['unit'] = remains
+                        remains = Math.floor(this.number / 10)
+                    }
+                    if (num == 1) {
+                        remains = remains % 10
+                        this.dict['tens'] = remains
+                        remains = Math.floor(this.number / 100)
+                    }
+                    if (num == 2) {
+                        remains = remains % 10
+                        this.dict['hundredse'] = remains
+                    }
+                }
+            }
+        }
+
+        let number = +prompt('Введите число от 0 до 999')
+
+        if (number < 0 || number > 999) {
+            number = null;
+            console.log('Пожалуйста введите число от 0 до 999.');
+        }
+        if (!Number.isInteger(number) && number > 0) {
+            number = null;
+            console.log('Пожалуйста введите целое число от 0 до 999.');
+        }
+        if (Number.isInteger(number)) {
+            let num = new Recalculation_to_hundredths(number);
+            num.recalculation();
+            console.log(num.dict)
+        }
+
+
+
+    </script>
+</body>
+
+</html>
